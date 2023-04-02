@@ -439,6 +439,10 @@
 #define NID_sect571r1           734
 #define OBJ_sect571r1           OBJ_secg_ellipticCurve,39L
 
+#define SN_stark256v1           "stark256v1"
+#define NID_stark256v1          1195
+#define OBJ_stark256v1          OBJ_secg_ellipticCurve,100L
+
 #define OBJ_wap_wsg_idm_ecid            OBJ_wap_wsg,4L
 
 #define SN_wap_wsg_idm_ecid_wtls1               "wap-wsg-idm-ecid-wtls1"

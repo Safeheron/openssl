@@ -169,6 +169,7 @@ static const TLS_GROUP_INFO nid_list[] = {
     {NID_brainpoolP512r1, 256, TLS_CURVE_PRIME}, /* brainpool512r1 (28) */
     {EVP_PKEY_X25519, 128, TLS_CURVE_CUSTOM}, /* X25519 (29) */
     {EVP_PKEY_X448, 224, TLS_CURVE_CUSTOM}, /* X448 (30) */
+    {NID_stark256v1, 128, TLS_CURVE_PRIME}, /* stark256v1 (31) */
 };
 
 static const unsigned char ecformats_default[] = {

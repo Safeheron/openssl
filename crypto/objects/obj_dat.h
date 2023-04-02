@@ -10,7 +10,7 @@
  */
 
 /* Serialized OID's */
-static const unsigned char so[7762] = {
+static const unsigned char so[7767] = {
     0x2A,0x86,0x48,0x86,0xF7,0x0D,                 /* [    0] OBJ_rsadsi */
     0x2A,0x86,0x48,0x86,0xF7,0x0D,0x01,            /* [    6] OBJ_pkcs */
     0x2A,0x86,0x48,0x86,0xF7,0x0D,0x02,0x02,       /* [   13] OBJ_md2 */
@@ -1076,9 +1076,10 @@ static const unsigned char so[7762] = {
     0x2A,0x85,0x03,0x07,0x01,0x02,0x01,0x01,0x04,  /* [ 7736] OBJ_id_tc26_gost_3410_2012_256_paramSetD */
     0x2A,0x86,0x48,0x86,0xF7,0x0D,0x02,0x0C,       /* [ 7745] OBJ_hmacWithSHA512_224 */
     0x2A,0x86,0x48,0x86,0xF7,0x0D,0x02,0x0D,       /* [ 7753] OBJ_hmacWithSHA512_256 */
+    0x2B,0x81,0x04,0x00,0x64,                      /* [ 7761] OBJ_stark256v1 */
 };
 
-#define NUM_NID 1195
+#define NUM_NID 1196
 static const ASN1_OBJECT nid_objs[NUM_NID] = {
     {"UNDEF", "undefined", NID_undef},
     {"rsadsi", "RSA Data Security, Inc.", NID_rsadsi, 6, &so[0]},
@@ -2275,9 +2276,10 @@ static const ASN1_OBJECT nid_objs[NUM_NID] = {
     {"magma-mac", "magma-mac", NID_magma_mac},
     {"hmacWithSHA512-224", "hmacWithSHA512-224", NID_hmacWithSHA512_224, 8, &so[7745]},
     {"hmacWithSHA512-256", "hmacWithSHA512-256", NID_hmacWithSHA512_256, 8, &so[7753]},
+    {"stark256v1", "stark256v1", NID_stark256v1, 5, &so[7761]},
 };
 
-#define NUM_SN 1186
+#define NUM_SN 1187
 static const unsigned int sn_objs[NUM_SN] = {
      364,    /* "AD_DVCS" */
      419,    /* "AES-128-CBC" */
@@ -3405,6 +3407,7 @@ static const unsigned int sn_objs[NUM_SN] = {
      496,    /* "singleLevelQuality" */
     1142,    /* "sm-scheme" */
      387,    /* "snmpv2" */
+    1195,    /* "stark256v1" */
      660,    /* "street" */
       85,    /* "subjectAltName" */
      769,    /* "subjectDirectoryAttributes" */
@@ -3467,7 +3470,7 @@ static const unsigned int sn_objs[NUM_SN] = {
     1093,    /* "x509ExtAdmission" */
 };
 
-#define NUM_LN 1186
+#define NUM_LN 1187
 static const unsigned int ln_objs[NUM_LN] = {
      363,    /* "AD Time Stamping" */
      405,    /* "ANSI X9.62" */
@@ -4609,6 +4612,7 @@ static const unsigned int ln_objs[NUM_LN] = {
     1139,    /* "sm4-ctr" */
     1133,    /* "sm4-ecb" */
     1135,    /* "sm4-ofb" */
+    1195,    /* "stark256v1" */
       16,    /* "stateOrProvinceName" */
      660,    /* "streetAddress" */
      498,    /* "subtreeMaximumQuality" */
@@ -4657,7 +4661,7 @@ static const unsigned int ln_objs[NUM_LN] = {
      125,    /* "zlib compression" */
 };
 
-#define NUM_OBJ 1071
+#define NUM_OBJ 1072
 static const unsigned int obj_objs[NUM_OBJ] = {
        0,    /* OBJ_undef                        0 */
      181,    /* OBJ_iso                          1 */
@@ -4965,6 +4969,7 @@ static const unsigned int obj_objs[NUM_OBJ] = {
      732,    /* OBJ_sect409r1                    1 3 132 0 37 */
      733,    /* OBJ_sect571k1                    1 3 132 0 38 */
      734,    /* OBJ_sect571r1                    1 3 132 0 39 */
+    1195,    /* OBJ_stark256v1                   1 3 132 0 100 */
      624,    /* OBJ_set_rootKeyThumb             2 23 42 3 0 0 */
      625,    /* OBJ_set_addPolicy                2 23 42 3 0 1 */
      626,    /* OBJ_setAttr_Token_EMV            2 23 42 3 2 1 */

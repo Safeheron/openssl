@@ -1,3 +1,28 @@
+Note:
+It's forked from https://github.com/openssl/openssl/tree/OpenSSL_1_1_1-stable and supports STARK Curve.
+
+Referrence for STARK Curve:
+- [STARK Curve](https://docs.starkware.co/starkex/crypto/stark-curve.html)
+- [starkware-crypto-utils](https://github.com/starkware-libs/starkware-crypto-utils)
+
+``` Javascript
+// Create an EC curve with stark curve parameters.
+const starkEc = new EllipticCurve(
+  new eCurves.PresetCurve({
+    type: 'short',
+    prime: null,
+    p: '08000000 00000011 00000000 00000000 00000000 00000000 00000000 00000001',
+    a: '00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001',
+    b: '06f21413 efbe40de 150e596d 72f7a8c5 609ad26c 15c915c1 f4cdfcb9 9cee9e89',
+    x: '01ef15c1 8599971b 7beced41 5a40f0c7 deacfd9b 0d1819e0 3d723d8b c943cfca',
+    y: '00566806 0aa49730 b7be4801 df46ec62 de53ecd1 1abe43a3 2873000c 36e8dc1f',
+    n: '08000000 00000010 ffffffff ffffffff b781126d cae7b232 1e66a241 adc64d2f',
+    hash: hash.sha256,
+    gRed: false,
+    g: constantPointsHex[1]
+  })
+);
+```
 
  OpenSSL 1.1.1u-dev
 
